@@ -15,6 +15,7 @@ export async function POST(req: NextRequest) {
       secure: process.env.NODE_ENV === "production",
       maxAge: 60 * 60 * 24, // 1 Day Login Session
       path: "/",
+      sameSite: "lax",
     });
 
     return NextResponse.json({ success: true });
