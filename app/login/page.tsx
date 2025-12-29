@@ -23,8 +23,7 @@ export default function LoginPage() {
       });
 
       if (res.ok) {
-        router.push("/"); // Success! Go to Dashboard
-        router.refresh();
+        window.location.href = "/";
       } else {
         setError("Invalid Password");
       }
